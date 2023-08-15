@@ -10,3 +10,13 @@ nav {
 nav span {
   font-family: "Bungee";
 }
+.nav-right {
+  display: flex;
+  flex-direction: column; 
+}
+
+.nav-right i {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
