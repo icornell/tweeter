@@ -40,7 +40,13 @@ form {
   font-size: 1.2em;
   flex-grow: 1; 
 }
+.over-limit {
+  color: red;
+}
 
+.within-limit {
+  color: green;
+}
 .button-container output {
   flex-grow: 1;
   text-align: right;
