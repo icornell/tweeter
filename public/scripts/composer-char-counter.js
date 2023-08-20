@@ -11,7 +11,7 @@ $(document).ready(function () {
 
     //Check if the remaining characters are negative or positive (under or over the 140 char. limit)
     if (remainingChars < 0) {
-      $(".counter").addClass("over-limit"); //add red class
+      $(".counter").addClass("over-limit"); //Add red class
       $(".counter").removeClass("within-limit"); //Remove green class
     } else {
       $(".counter").removeClass("over-limit"); //Remove red class
