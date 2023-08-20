@@ -1,0 +1,59 @@
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.input-container {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.input-container label {
+  color: #374266;
+  font-family: 'Bungee', sans-serif;
+  font-size: 1.2em;
+}
+
+.input-container input {
+  width: 100%;
+  border: none;
+  border-bottom: 5px solid #374266;
+  color: #374266;
+  padding: 0.5em;
+  margin-top: 0.2em;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1.2em;
+  background-color: transparent;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.counter {
+  text-align: right;
+  font-family: 'Bungee', sans-serif;
+  font-size: 1.2em;
+  flex-grow: 1; 
+}
+
+.button-container output {
+  flex-grow: 1;
+  text-align: right;
+  font-family: 'Bungee', sans-serif;
+  font-size: 1.2em;
+}
+
+.button-container button {
+  background-color: #374266;
+  color: #f4f1ec;
+  border: 1px solid #374266;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  font-family: 'Bungee', sans-serif;
+  font-size: 1.2em;
+}

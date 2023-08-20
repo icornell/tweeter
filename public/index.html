@@ -14,7 +14,8 @@
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/header.css" type="text/css"/>  
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -44,23 +45,38 @@
     <nav>
       <span>tweeter</span>
       <a>
-      <div class="nav-right">
-        <p class="fixed"><strong>Write &nbsp;</strong>a new tweet</p>
-        <i class="fa-solid fa-angles-down"></i>
-      </div>
-    </a>
+        <div class="nav-right">
+          <p class="fixed"><strong>Write &nbsp;</strong>a new tweet</p>
+          <i class="fa-solid fa-angles-down"></i>
+        </div>
+      </a>
     </nav>
     <!--Header-->
     <header class="profile-header">
       <div class="user-image">
-          <img class="user-image" src="/images/profile-hex.png"> 
+        <img class="user-image" src="/images/profile-hex.png" />
       </div>
-      <br>
+      <br />
       <div class="user-name">
-          <h2>Your Name</h2>
+        <h2>Your Name</h2>
       </div>
-  </header>
+    </header>
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form action="/tweets" method="POST">
+          <div class="input-container">
+            <label for="tweet-text">What are you humming about?</label>
+            <input type="text" name="text" id="tweet-text" placeholder="Enter your tweet">
+          </div>
+          <div class="button-container">
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+    </main>
+    
   </body>
 </html>
