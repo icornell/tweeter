@@ -7,6 +7,7 @@ $(document).ready(function () {
     const remainingChars = maxLength - inputValue.length;
 
     // Find the closest .new-tweet section and then find the .counter element within it
+    //.closest traverses up the DOM tree here and returns the first ancestor that matches the selector.
     const counterElement = $(this).closest('.new-tweet').find('.counter');
 
     counterElement.text(remainingChars);
