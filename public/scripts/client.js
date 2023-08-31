@@ -44,7 +44,7 @@ $(document).ready(function () {
         </div>
       </header>
       <div class="tweet-content">
-        <p>${tweet.content.text}</p>
+      <p>${$("<div>").text(tweet.content.text).html()}</p>
       </div>
       <hr class="tweet-line">
       <footer class="tweet-footer">
