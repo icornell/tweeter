@@ -74,7 +74,7 @@ $(document).ready(function () {
   renderTweets(data);
 
   const loadTweets = function () {
-    //deifne a function to fetch the tweets using AJAX
+    //fetch the tweets using AJAX
     $.get("http://localhost:8080/tweets")
       .then(function (response) {
         // Call the renderTweets function with the response
@@ -87,7 +87,7 @@ $(document).ready(function () {
   // Call the loadTweets function to fetch and render tweets on page load
   loadTweets();
 
-  // Add an event listener for the form submit event
+  // Submit a New Tweet
   $(".new-tweet-form").submit(function (event) {
     console.log("Form submitted");
     // Prevent the default form submission behavior
@@ -108,6 +108,8 @@ $(document).ready(function () {
     $.post("/tweets", serializedData)
       .then((response) => {
         console.log("Success: ", response);
+        loadTweets(); //fetch and render updated tweets
+        $(this).find("textarea[name='text']").val(""); //clear input field after successful submission
       })
       .catch((error) => {
         console.log("Error: ", error);
