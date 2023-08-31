@@ -35,7 +35,9 @@ $(document).ready(function () {
     let $tweet = $(`
       <article class="tweet">
       <header class="tweet-header">
-        <img class="avatar" src="${tweet.user.avatars}" alt="User Profile Image">
+        <img class="avatar" src="${
+          tweet.user.avatars
+        }" alt="User Profile Image">
         <div class="user-info">
           <h3 class="name">${tweet.user.name}</h3>
           <p class="handle">${tweet.user.handle}</p>
@@ -90,6 +92,16 @@ $(document).ready(function () {
     console.log("Form submitted");
     // Prevent the default form submission behavior
     event.preventDefault();
+    // Validate the tweet content
+    const tweetContent = $(this).find("textarea[name='text']").val().trim();
+    if (tweetContent === "") {
+      alert("Tweet content is not present. Please enter a tweet.");
+      return; // Exit the function if validation fails
+    }
+    if (tweetContent.length > 140) {
+      alert("Tweet content is too long. Maximum 140 characters allowed.");
+      return;
+    }
     //serialize the form data
     const serializedData = $(this).serialize();
     //send a POST request for a new tweet
