@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/error.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -78,10 +79,16 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form action="/tweets" method="POST" class="new-tweet-form">
+          <!-- error message -->
+          <div class="error-message" style="display: none">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <!-- Red alert icon -->
+            <span class="error-text"></span>
+          </div>
+          <!-- new tweet-->
           <div class="input-container">
             <label for="tweet-text">What are you humming about?</label>
-            <!--should be text area not input-->
-            <input 
+            <input
               type="text"
               name="text"
               id="tweet-text"

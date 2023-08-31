@@ -66,7 +66,7 @@ $(document).ready(function () {
   const renderTweets = function (tweets) {
     const $tweetsContainer = $("#tweets-container");
     $tweetsContainer.empty();
-    const reverseTweets = tweets.reverse();//to reverse the array of tweets to show the most recent at the top
+    const reverseTweets = tweets.reverse(); //to reverse the array of tweets to show the most recent at the top
     for (const tweet of tweets) {
       const $tweetElement = createTweetElement(tweet);
       $tweetsContainer.append($tweetElement);
@@ -92,14 +92,22 @@ $(document).ready(function () {
     console.log("Form submitted");
     // Prevent the default form submission behavior
     event.preventDefault();
+    //slide up the error message if it is visible
+    $(".error-message").slideUp();
     // Validate the tweet content
     const tweetContent = $("#tweet-text").val().trim();
     if (!tweetContent) {
-      alert("Tweet content is not present. Please enter a tweet.");
+      $(".error-message .error-text").text(
+        "Brevity is the soul of wit, but you need to write something!"
+      );
+      $(".error-message").slideDown();
       return; // Exit the function if validation fails
     }
     if (tweetContent.length > 140) {
-      alert("Tweet content is too long. Maximum 140 characters allowed.");
+      $(".error-message .error-text").text(
+        "Brevity is the soul of wit - your tweet is too long!"
+      );
+      $(".error-message").slideDown();
       return;
     }
     //serialize the form data
