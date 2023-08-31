@@ -32,7 +32,7 @@ $(document).ready(function () {
 
   //function to create a tweet element
   const createTweetElement = function (tweet) {
-    let $tweet = $(`
+    const $tweet = $(`
       <article class="tweet">
       <header class="tweet-header">
         <img class="avatar" src="${
@@ -65,14 +65,13 @@ $(document).ready(function () {
   //function to render the tweets
   const renderTweets = function (tweets) {
     const $tweetsContainer = $("#tweets-container");
+    $tweetsContainer.empty();
     for (const tweet of tweets) {
       const $tweetElement = createTweetElement(tweet);
       $tweetsContainer.append($tweetElement);
     }
   };
-  //call the renderTweets function with the data
-  renderTweets(data);
-
+  
   const loadTweets = function () {
     //fetch the tweets using AJAX
     $.get("http://localhost:8080/tweets")
@@ -93,8 +92,8 @@ $(document).ready(function () {
     // Prevent the default form submission behavior
     event.preventDefault();
     // Validate the tweet content
-    const tweetContent = $(this).find("textarea[name='text']").val().trim();
-    if (tweetContent === "") {
+    const tweetContent = $("#tweet-text").val().trim();
+    if (tweetContent === "") { //can also have !tweetContent
       alert("Tweet content is not present. Please enter a tweet.");
       return; // Exit the function if validation fails
     }
@@ -109,7 +108,7 @@ $(document).ready(function () {
       .then((response) => {
         console.log("Success: ", response);
         loadTweets(); //fetch and render updated tweets
-        $(this).find("textarea[name='text']").val(""); //clear input field after successful submission
+        tweetContent.val(""); //clear input field after successful submission
       })
       .catch((error) => {
         console.log("Error: ", error);
