@@ -66,12 +66,13 @@ $(document).ready(function () {
   const renderTweets = function (tweets) {
     const $tweetsContainer = $("#tweets-container");
     $tweetsContainer.empty();
+    const reverseTweets = tweets.reverse();//to reverse the array of tweets to show the most recent at the top
     for (const tweet of tweets) {
       const $tweetElement = createTweetElement(tweet);
       $tweetsContainer.append($tweetElement);
     }
   };
-  
+
   const loadTweets = function () {
     //fetch the tweets using AJAX
     $.get("http://localhost:8080/tweets")
@@ -93,7 +94,7 @@ $(document).ready(function () {
     event.preventDefault();
     // Validate the tweet content
     const tweetContent = $("#tweet-text").val().trim();
-    if (tweetContent === "") { //can also have !tweetContent
+    if (!tweetContent) {
       alert("Tweet content is not present. Please enter a tweet.");
       return; // Exit the function if validation fails
     }
@@ -108,7 +109,8 @@ $(document).ready(function () {
       .then((response) => {
         console.log("Success: ", response);
         loadTweets(); //fetch and render updated tweets
-        tweetContent.val(""); //clear input field after successful submission
+        $(".counter").text("140"); // Reset the counter to 140
+        $("#tweet-text").val(""); // Clear the tweet submission field
       })
       .catch((error) => {
         console.log("Error: ", error);
