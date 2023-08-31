@@ -4,8 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function () {
-  console.log("ready!");
-
   // Fake data taken from initial-tweets.json
   const data = [
     {
@@ -40,7 +38,7 @@ $(document).ready(function () {
     }
   };
 
-  //function to create a tweet element
+  //function to create a tweet element NOTE RETURN HERE FOR TIMESTAMP
   const createTweetElement = function (tweet) {
     let $tweet = $(`
     <article class="tweet">
@@ -57,7 +55,7 @@ $(document).ready(function () {
     <hr class="tweet-line">
     <footer class="tweet-footer">
       <div class="date">
-        <p class="timestamp">${tweet.created_at}</p>
+        <p class="timestamp">${tweet.created_at}</p> 
       </div>
       <div class="icons">
         <i class="fa-solid fa-comment"></i>
@@ -71,4 +69,21 @@ $(document).ready(function () {
   };
 
   renderTweets(data);
+
+  // Add an event listener for the form submit event
+  $(".new-tweet-form").submit(function (event) {
+    console.log("Form submitted");
+    // Prevent the default form submission behavior
+    event.preventDefault();
+    // Serialize the form data
+    const serializedData = $(this).serialize();
+
+    $.post("/tweets", serializedData)
+      .then((response) => {
+        console.log("Success: ", response);
+      })
+      .catch((error) => {
+        console.log("Error: ", error);
+      });
+  });
 });
