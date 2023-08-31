@@ -47,7 +47,7 @@ $(document).ready(function () {
       <hr class="tweet-line">
       <footer class="tweet-footer">
         <div class="date">
-          <p class="timestamp">${tweet.created_at}</p> 
+          <p class="timestamp">${timeago.format(tweet.created_at)}</p> 
         </div>
         <div class="icons">
           <i class="fa-solid fa-comment"></i>
@@ -68,7 +68,7 @@ $(document).ready(function () {
       $tweetsContainer.append($tweetElement);
     }
   };
-//call the renderTweets function with the data
+  //call the renderTweets function with the data
   renderTweets(data);
 
   const loadTweets = function () {
