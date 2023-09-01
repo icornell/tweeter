@@ -6,7 +6,9 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -31,4 +33,17 @@ main {
   background-color: #f4f1ec;
   margin: 0 auto;
   width: 90%;
+}
+
+/* Formatting for desktop screens */
+@media screen and (min-width: 1024px) {
+
+  main {
+    width: 52%;
+    margin: 0 3%;
+    float: right;
+  }
+  body {
+      margin-top: 150px;
+  }
 }

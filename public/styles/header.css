@@ -24,3 +24,14 @@
   margin-top: 0px;
   padding: 0px;
 }
+
+/* Media query for desktops */
+@media screen and (min-width: 1024px) {
+.profile-header {
+    width: 30%;
+    float: left;
+    margin: 1em 4%;
+    padding: 1em 0 0;
+    height: auto;
+  }
+}
