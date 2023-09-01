@@ -7,6 +7,7 @@ This app was built as part of the Lighthouse Labs Web Development Flex Bootcamp 
 ## Features
 
 - Begin by writing a tweet in the text area and clicking the "Tweet" button. This will submit the tweet and display it on the page, with the most recent tweets at the top. The tweet will also be erased from the text area.
+- The app will display an animated shadow when hovering over a tweet.
 - The app will display an animated scrolling error message if the user tries to submit an empty tweet or a tweet that is too long, and delete the error when a vaild tweet is submitted.
 - The app will display a green counter that counts down the number of characters remaining in the tweet. The counter will turn red when the number of characters remaining is less than 0.
 - The app uses responsive design and will adapt to different screen sizes.
