@@ -14,6 +14,10 @@
   position: relative;
   transition: box-shadow 0.3s;
 }
+.tweet:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Add a box-shadow when hovering */
+}
 .tweet-header {
   display: flex;
   flex-direction: row;
