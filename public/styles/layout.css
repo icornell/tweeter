@@ -37,13 +37,12 @@ main {
 
 /* Formatting for desktop screens */
 @media screen and (min-width: 1024px) {
-
   main {
     width: 52%;
     margin: 0 3%;
     float: right;
   }
   body {
-      margin-top: 150px;
+    margin-top: 150px;
   }
 }

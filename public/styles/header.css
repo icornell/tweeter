@@ -27,7 +27,7 @@
 
 /* Media query for desktops */
 @media screen and (min-width: 1024px) {
-.profile-header {
+  .profile-header {
     width: 30%;
     float: left;
     margin: 1em 4%;
