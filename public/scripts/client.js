@@ -30,7 +30,7 @@ $(document).ready(function () {
     },
   ];
 
-  //function to create a tweet element
+  //function to create a tweet element, including how to prevent XSS in the tweet content and a timestamp with timeago.js library
   const createTweetElement = function (tweet) {
     const $tweet = $(`
       <article class="tweet">
@@ -39,8 +39,8 @@ $(document).ready(function () {
           tweet.user.avatars
         }" alt="User Profile Image">
         <div class="user-info">
-          <h3 class="name">${tweet.user.name}</h3>
-          <p class="handle">${tweet.user.handle}</p>
+          <h3 class="user-name">${tweet.user.name}</h3>
+          <p class="user-handle">${tweet.user.handle}</p>
         </div>
       </header>
       <div class="tweet-content">
@@ -89,7 +89,6 @@ $(document).ready(function () {
 
   // Submit a New Tweet
   $(".new-tweet-form").submit(function (event) {
-    console.log("Form submitted");
     // Prevent the default form submission behavior
     event.preventDefault();
     //slide up the error message if it is visible
