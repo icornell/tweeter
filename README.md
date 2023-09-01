@@ -15,14 +15,17 @@ This app was built as part of the Lighthouse Labs Web Development Flex Bootcamp 
 
 ## Screenshots
 
-Main page: 
+Main page in desktop view: 
+!["Screenshot of main page"](https://github.com/icornell/tweeter/blob/master/docs/main-page-desktop.png?raw=true)
 
 Main page with the error message displayed when the user tries to submit an empty tweet:
+!["Screenshot of error message with empty tweet"](https://github.com/icornell/tweeter/blob/master/docs/error-no-words.png?raw=true) 
 
 Main page with the error message displayed when the user tries to submit a tweet that is too long:
+!["Screenshot of error message with too many characters"](https://github.com/icornell/tweeter/blob/master/docs/error-over-max-count.png?raw=true)
 
 Condensed view of the main page for mobile devices:
-
+!["Screenshot of main page-condensed view"](https://github.com/icornell/tweeter/blob/master/docs/main-page-mobile.png?raw=true)
 
 
 ## Getting Started
