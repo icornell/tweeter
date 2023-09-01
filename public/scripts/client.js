@@ -98,14 +98,14 @@ $(document).ready(function () {
     const tweetContent = $("#tweet-text").val().trim();
     if (!tweetContent) {
       $(".error-message .error-text").text(
-        "Brevity is the soul of wit, but you need to write something!"
+        "Don't panic, but your tweet needs words! In the vast universe of tweets, an empty one is like a towel without a purpose."
       );
       $(".error-message").slideDown();
       return; // Exit the function if validation fails
     }
     if (tweetContent.length > 140) {
       $(".error-message .error-text").text(
-        "Brevity is the soul of wit - your tweet is too long!"
+        "Curiouser and curiouser! Your tweet should be under 140 characters, or you'll fall down a digital rabbit hole!"
       );
       $(".error-message").slideDown();
       return;
