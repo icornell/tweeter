@@ -28,9 +28,10 @@ Condensed view of the main page for mobile devices:
 
 1. Clone this repository to your local machine. 
 2. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
-5. Start writing your tweets in the text box and have fun! 
+3. For users: start the web server using the `npm start` command. The app will be served at <http://localhost:8080/>.
+4. For developers: start the web server using the `npm run local` command. This will run the Nodemon package, which will automatically restart the server whenever you change the code. 
+5. Go to <http://localhost:8080/> in your browser.
+6. Start writing your tweets in the text box and have fun! 
 
 ## Dependencies 
 
