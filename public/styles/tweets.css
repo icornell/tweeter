@@ -56,7 +56,7 @@
   justify-self: left;
   color: #4056a1;
   margin: 0;
-  margin-right: 0.5em; /* Add spacing between username and handle */
+  margin-left: 0.3em; /* Add spacing between username and handle */
 }
 
 .user-info .user-handle {
