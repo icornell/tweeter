@@ -35,16 +35,16 @@ $(document).ready(function () {
     const $tweet = $(`
       <article class="tweet">
       <header class="tweet-header">
+      <div class="user-info">
         <img class="avatar" src="${
           tweet.user.avatars
         }" alt="User Profile Image">
-        <div class="user-info">
           <h3 class="user-name">${tweet.user.name}</h3>
-          <p class="user-handle">${tweet.user.handle}</p>
         </div>
+          <p class="user-handle">${tweet.user.handle}</p>
       </header>
       <div class="tweet-content">
-      <p>${$("<div>").text(tweet.content.text).html()}</p>
+      <p class = "tweet-paragraph">${$("<div>").text(tweet.content.text).html()}</p>
       </div>
       <hr class="tweet-line">
       <footer class="tweet-footer">
