@@ -75,7 +75,7 @@ $(document).ready(function () {
 
   const loadTweets = function () {
     //fetch the tweets using AJAX
-    $.get("http://localhost:8080/tweets")
+    $.get("/tweets")
       .then(function (response) {
         // Call the renderTweets function with the response
         renderTweets(response);
