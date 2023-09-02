@@ -30,7 +30,7 @@
 }
 
 .tweet-paragraph {
-  overflow-wrap: anywhere;
+  overflow-wrap: anywhere; /* fix issue with text overflowing text box*/
 }
 
 .tweet .img {
@@ -56,7 +56,7 @@
   justify-self: left;
   color: #4056a1;
   margin: 0;
-  margin-left: 0.3em; /* Add spacing between username and handle */
+  margin-left: 0.3em; /* Add spacing between username and avatar */
 }
 
 .user-info .user-handle {
@@ -69,7 +69,7 @@
 .tweet-content {
   display: flex;
   flex-direction: row;
-  justify-content: left;
+  justify-content: left; /* Align tweet text to the left*/
   font-size: 1.5em;
   padding: 10px;
 }
