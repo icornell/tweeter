@@ -14,6 +14,7 @@ nav {
 }
 nav span {
   font-family: "Bungee";
+  font-size: 1.5em;
 }
 .nav-right {
   display: flex;
@@ -24,4 +25,30 @@ nav span {
   display: flex;
   flex-direction: column;
   align-self: center;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 1024px) {
+  nav {
+    height: 100px;
+    background-image: url(http://www.transparenttextures.com/patterns/brushed-alum.png);
+    background-color: grey;
+    color: #4056a1;
+  }
+  nav span {
+    font-size: 1.5em;
+  }
+  .nav-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .nav-right i {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    color: #4056a1;
+  }
 }
